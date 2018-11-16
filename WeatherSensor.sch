@@ -1,0 +1,199 @@
+EESchema Schematic File Version 4
+LIBS:APRS-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor:BME280 U4
+U 1 1 5BF0234E
+P 4950 3900
+F 0 "U4" H 4520 3946 50  0000 R CNN
+F 1 "BME280" H 4520 3855 50  0000 R CNN
+F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 4950 3700 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280_DS001-11.pdf" H 4950 3700 50  0001 C CNN
+	1    4950 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR046
+U 1 1 5BF02355
+P 4850 3100
+F 0 "#PWR046" H 4850 2950 50  0001 C CNN
+F 1 "VDD" H 4867 3273 50  0000 C CNN
+F 2 "" H 4850 3100 50  0001 C CNN
+F 3 "" H 4850 3100 50  0001 C CNN
+	1    4850 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR047
+U 1 1 5BF0235B
+P 4850 4650
+F 0 "#PWR047" H 4850 4400 50  0001 C CNN
+F 1 "GND" H 4855 4477 50  0000 C CNN
+F 2 "" H 4850 4650 50  0001 C CNN
+F 3 "" H 4850 4650 50  0001 C CNN
+	1    4850 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3100 4850 3200
+Wire Wire Line
+	5050 3300 5050 3200
+Wire Wire Line
+	5050 3200 4850 3200
+Connection ~ 4850 3200
+Wire Wire Line
+	4850 3200 4850 3300
+Wire Wire Line
+	4850 4500 4850 4550
+Wire Wire Line
+	5050 4500 5050 4550
+Wire Wire Line
+	5050 4550 4850 4550
+Connection ~ 4850 4550
+Wire Wire Line
+	4850 4550 4850 4650
+Text Label 6250 3800 0    50   ~ 0
+I2C_SCL
+Text Label 6850 4000 0    50   ~ 0
+I2C_SDA
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP1
+U 1 1 5BF0236D
+P 5700 3100
+F 0 "JP1" H 5700 3214 50  0000 C CNN
+F 1 "SolderJumper_3_Bridged12" H 5700 3214 50  0001 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 5700 3100 50  0001 C CNN
+F 3 "~" H 5700 3100 50  0001 C CNN
+	1    5700 3100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R25
+U 1 1 5BF02374
+P 5700 3450
+F 0 "R25" H 5770 3496 50  0000 L CNN
+F 1 "10k" H 5770 3405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5630 3450 50  0001 C CNN
+F 3 "~" H 5700 3450 50  0001 C CNN
+	1    5700 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR049
+U 1 1 5BF0237B
+P 5900 3100
+F 0 "#PWR049" H 5900 2850 50  0001 C CNN
+F 1 "GND" H 5905 2927 50  0000 C CNN
+F 2 "" H 5900 3100 50  0001 C CNN
+F 3 "" H 5900 3100 50  0001 C CNN
+	1    5900 3100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VDD #PWR048
+U 1 1 5BF02381
+P 5700 2850
+F 0 "#PWR048" H 5700 2700 50  0001 C CNN
+F 1 "VDD" H 5717 3023 50  0000 C CNN
+F 2 "" H 5700 2850 50  0001 C CNN
+F 3 "" H 5700 2850 50  0001 C CNN
+	1    5700 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 2900 5700 2850
+Wire Wire Line
+	5850 3100 5900 3100
+$Comp
+L power:VDD #PWR051
+U 1 1 5BF02389
+P 6200 4200
+F 0 "#PWR051" H 6200 4050 50  0001 C CNN
+F 1 "VDD" H 6217 4373 50  0000 C CNN
+F 2 "" H 6200 4200 50  0001 C CNN
+F 3 "" H 6200 4200 50  0001 C CNN
+	1    6200 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5550 4200 6200 4200
+Text Notes 5750 4650 0    50   ~ 0
+I2C Selected
+Text Notes 5550 3550 1    50   ~ 0
+I2C Address= 0x76
+$Comp
+L Device:R R26
+U 1 1 5BF02392
+P 6200 3450
+F 0 "R26" H 6270 3496 50  0000 L CNN
+F 1 "10k" H 6270 3405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6130 3450 50  0001 C CNN
+F 3 "~" H 6200 3450 50  0001 C CNN
+	1    6200 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R27
+U 1 1 5BF02399
+P 6800 3450
+F 0 "R27" H 6870 3496 50  0000 L CNN
+F 1 "10k" H 6870 3405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6730 3450 50  0001 C CNN
+F 3 "~" H 6800 3450 50  0001 C CNN
+	1    6800 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 3800 6200 3600
+Wire Wire Line
+	6800 4000 6800 3600
+Wire Wire Line
+	5550 4000 6800 4000
+$Comp
+L power:VDD #PWR050
+U 1 1 5BF023A3
+P 6200 3100
+F 0 "#PWR050" H 6200 2950 50  0001 C CNN
+F 1 "VDD" H 6217 3273 50  0000 C CNN
+F 2 "" H 6200 3100 50  0001 C CNN
+F 3 "" H 6200 3100 50  0001 C CNN
+	1    6200 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 3100 6200 3200
+Wire Wire Line
+	6800 3300 6800 3200
+Wire Wire Line
+	6800 3200 6200 3200
+Connection ~ 6200 3200
+Wire Wire Line
+	6200 3200 6200 3300
+Wire Wire Line
+	5550 3600 5700 3600
+Wire Wire Line
+	5550 3800 6200 3800
+Wire Wire Line
+	6200 3800 6600 3800
+Connection ~ 6200 3800
+Wire Wire Line
+	6800 4000 7250 4000
+Connection ~ 6800 4000
+Text HLabel 7250 4000 2    50   BiDi ~ 0
+I2C_SDA
+Text HLabel 6600 3800 2    50   BiDi ~ 0
+I2C_SCL
+$EndSCHEMATC
